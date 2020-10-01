@@ -34,15 +34,18 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
+      // set the language of the application
       <Html lang="eng">
         <Head>
           <meta charSet="utf-8" />
+          {/* fonts avaiable in all app */}
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap"
             rel="stylesheet"
           ></link>
         </Head>
         <body>
+          {/* body of app is in Main tag */}
           <Main />
           <NextScript />
         </body>
