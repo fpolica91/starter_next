@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next'
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import { Title } from '../styles/Pages/home'
+import SEO from '@/components/SEO'
 
 interface Products {
   id: string
@@ -21,11 +22,12 @@ export default function Home({ recommendedProducts }: IHomeProps) {
 
   return (
     <div>
+      <SEO title="Home" />
       <section>
         <Title>Products</Title>
         <ul>
           {recommendedProducts.map((product) => (
-            <li id={product.id}>{product.title}</li>
+            <li key={product.id}>{product.title}</li>
           ))}
         </ul>
       </section>
